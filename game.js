@@ -36,7 +36,7 @@ function onGameStart() {
     paddle = {
         position:     {x: screenWidth / 2,
                        y: screenHeight - 200},
-        width:        100,
+        width:        200,
         height:       20};
 }
 
