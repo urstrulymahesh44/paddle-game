@@ -68,11 +68,17 @@ function onSimulation() {
     }
 
     // Bounce the ball off the paddle if it is overlapped AND moving down on the screen.
-    if ((abs(ball.position.x - paddle.position.x) <= ball.radius + paddle.width / 2) &&
-        (abs(ball.position.y - paddle.position.y) <= ball.radius + paddle.height / 2) &&
+    if ((abs(ball.position.x - paddle.position.x) = ball.radius + paddle.width / 2) &&
+        (abs(ball.position.y - paddle.position.y) = ball.radius + paddle.height / 2) &&
         (ball.velocity.y > 0)) {
-        ball.velocity.y = -ball.velocity.y;
+       ball.velocity.y = -ball.velocity.y;
+    if ((abs(ball.position.x - paddle.position.x) < ball.radius + paddle.width / 2) &&
+        (abs(ball.position.y - paddle.position.y) < ball.radius + paddle.height / 2) &&
+        (ball.velocity.y > 0)) {
+       
+        ball.velocity.y=0;
     }
+
 }
 
 function onGameDraw() {
